@@ -1,70 +1,27 @@
 // import {  } from ""
-import "../navbar.css";
+import "../styles/home.css";
+import Navbar from "../components/Navbar";
 function Home(props) {
 	return (
 		<div className="home page">
-			<nav
-				className="navbar navbar-expand-sm"
-				aria-label="Offcanvas navbar small"
-			>
-				<div className="container-fluid">
-					<div className="navbar-brand">
-						<img src="/assets/shared/logo.svg" alt="Brand Logo" />
+			<Navbar />
+			<main>
+				<div className="hero">
+					<div className="text">
+						<p className="w-100">So you want to travel to</p>
+						<h1 className="w-100">SPACE</h1>
+						<p>
+							Let’s face it; if you want to go to space, you might as well
+							genuinely go to outer space and not hover kind of on the edge of
+							it. Well sit back, and relax because we’ll give you a truly out of
+							this world experience!
+						</p>
 					</div>
-					<button
-						className="navbar-toggler"
-						type="button"
-						data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvasNavbar2"
-						aria-controls="offcanvasNavbar2"
-						aria-label="Toggle navigation"
-						onClick={(e) => {
-							e.target.classList.toggle("d-none");
-						}}
-					>
-						<span className="navbar-toggler-icon"></span>
-					</button>
-					<div
-						className="offcanvas offcanvas-end"
-						tabIndex="-1"
-						id="offcanvasNavbar2"
-						aria-labelledby="offcanvasNavbar2Label"
-					>
-						<div className="offcanvas-content">
-							<div className="offcanvas-header">
-								<button
-									type="button"
-									className="btn-close"
-									data-bs-dismiss="offcanvas"
-									aria-label="Close"
-									onClick={() => {
-										document
-											.querySelector(".navbar-toggler-icon")
-											.classList.toggle("d-none");
-									}}
-								></button>
-							</div>
-							<div className="offcanvas-body">
-								<ul className="navbar-nav justify-content-end flex-grow-1">
-									<li className="nav-item active">
-										<span className="mr-2">00</span> Home
-									</li>
-									<li className="nav-item inactive">
-										<span className="mr-2">01</span> Destination
-									</li>
-									<li className="nav-item inactive">
-										<span className="mr-2">02</span> Crew
-									</li>
-									<li className="nav-item inactive">
-										<span className="mr-2">03</span> Technology
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div className="background"></div>
+					<div className="button-container">
+						<div className="button">Explore</div>
 					</div>
 				</div>
-			</nav>
+			</main>
 		</div>
 	);
 }

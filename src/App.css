@@ -3,8 +3,11 @@
 	color: #d0d6f9;
 }
 .page {
-	height: 100dvh;
-	width: 100dvw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -50,4 +53,14 @@
 	.technology {
 		background-image: url("../public/assets/technology/background-technology-desktop.jpg");
 	}
+}
+main {
+	width: 100%;
+	height: 100%;
+}
+a {
+	color: white !important;
+	text-decoration: none !important;
+	width: 100%;
+	display: block;
 }
