@@ -105,6 +105,15 @@
 	.navbar > .container-fluid {
 		padding: 0px;
 	}
+	li {
+		height: 100% !important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	li:has(> a.active) {
+		border-bottom: 4px solid white;
+	}
 }
 @media (min-width: 576px) and (max-width: 881px) {
 	.offcanvas-body {

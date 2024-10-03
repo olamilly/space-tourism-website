@@ -2,13 +2,19 @@
 	height: 100%;
 	display: flex;
 }
-.button {
-	background-color: white;
+.button-container {
 	border-radius: 50%;
-	color: black;
-	padding: 5rem;
-	/* height: 40%; */
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+.button-container > p {
+	font-size: 18px;
+	color: black;
+	font-weight: bold;
+}
+
 @media (max-width: 575px) {
 	.home > main {
 		padding: 1rem;
@@ -16,6 +22,22 @@
 	.hero {
 		flex-direction: column;
 		text-align: center;
+		justify-content: center;
+	}
+	.button {
+		justify-content: center;
+		height: 30%;
+		align-items: flex-end;
+	}
+	.button-container {
+		width: 170px;
+		height: 170px;
+	}
+	.text-container {
+		width: 85%;
+	}
+	.text {
+		display: flex;
 		justify-content: center;
 	}
 }
@@ -28,6 +50,22 @@
 		text-align: center;
 		justify-content: center;
 	}
+	.button {
+		justify-content: center;
+		height: 30%;
+		align-items: flex-end;
+	}
+	.button-container {
+		width: 170px;
+		height: 170px;
+	}
+	.text-container {
+		width: 65%;
+	}
+	.text {
+		display: flex;
+		justify-content: center;
+	}
 }
 @media (min-width: 882px) {
 	.home > main {
@@ -36,21 +74,28 @@
 	.hero {
 		justify-content: space-between;
 	}
-	.hero > .text {
+	.hero > .text,
+	.button {
 		flex-direction: column;
 		text-align: left;
 
 		align-items: center;
 		justify-content: flex-end;
 	}
-	.hero > .button-container {
-		align-items: flex-end;
+	.text-container {
+		display: flex;
+		flex-direction: column;
+		/* align-items: flex-end; */
 		justify-content: center;
 	}
-	.hero > .button-container,
+
 	.hero > .text {
 		width: 40%;
 		height: 100%;
 		display: flex;
+	}
+	.button-container {
+		width: 200px;
+		height: 200px;
 	}
 }
