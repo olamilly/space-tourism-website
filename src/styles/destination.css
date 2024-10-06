@@ -1,0 +1,136 @@
+.destinationBody {
+	width: 100%;
+}
+.image {
+	display: flex;
+	justify-content: center;
+}
+.image > img {
+	margin: 1.5rem;
+}
+.destinationNav {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 70%;
+}
+.details {
+	width: 100%;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.currentDestination {
+	padding-bottom: 10px;
+	border-bottom: 3px solid white;
+}
+.destinationName {
+	font-size: 100px;
+}
+.ap {
+	padding-bottom: 13px;
+	color: #d0d6f9;
+}
+li {
+	cursor: pointer;
+}
+.destinationBody > div {
+	width: 100%;
+}
+
+@media (max-width: 575.98px) {
+	.image > img {
+		width: 150px;
+		height: 150px;
+	}
+	main {
+		padding: 1rem;
+	}
+	.destinationBody {
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.details > .small-text-colored {
+		padding-bottom: 1rem;
+	}
+	.pageHeader {
+		text-align: center;
+	}
+	.stats {
+		border-top: 0.5px solid white;
+		padding-top: 1.5rem;
+		width: 100%;
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+	.destinationBody {
+		align-items: center;
+		flex-direction: column;
+	}
+	.image > img {
+		width: 300px;
+		height: 300px;
+	}
+	main {
+		padding: 2.5rem;
+	}
+	.destinationBody {
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.details > .small-text-colored {
+		padding-bottom: 1rem;
+	}
+
+	.stats {
+		border-top: 0.5px solid white;
+		padding-top: 1.5rem;
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	.pageHeader {
+		width: 100%;
+		text-align: left !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.image {
+		justify-content: flex-start;
+	}
+	.image > img {
+		margin-left: 0px;
+	}
+	.destination > main {
+		padding-top: 1.4rem;
+		padding-bottom: 1.4rem;
+		align-items: center;
+	}
+	.details > .small-text-colored {
+		padding-bottom: 1rem;
+	}
+	.large-right {
+		min-height: 100%;
+	}
+	.details {
+		height: 75%;
+	}
+	/* .stats {
+		border-top: 0.5px solid white;
+		padding-top: 1.5rem;
+		width: 100%;
+		justify-content: flex-start;
+		gap: 7rem;
+		text-align: left !important;
+	} */
+	.stats {
+		border-top: 0.5px solid white;
+		padding-top: 1.5rem;
+		width: 100%;
+		justify-content: space-evenly;
+	}
+}

@@ -1,15 +1,32 @@
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		sans-serif;
+	font-family: "Barlow";
+	font-weight: 400;
+	font-style: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	overflow-y: scroll !important;
 }
+/* @media (max-height: 575px) {
+	html,
+	#root,
+	body {
+		height: auto;
+		width: 100%;
+	}
+}
+@media (min-height: 576px) {
+	html,
+	#root,
+	body {
+		height: 100%;
+		width: 100%;
+	}
+} */
 html,
-#root,
-body {
-	height: 100%;
+body,
+#root {
+	min-height: 100vh;
 	width: 100%;
 }
 
@@ -17,3 +34,60 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
+.big-text {
+	font-size: 134px;
+	font-family: "Bellefair", serif;
+	font-weight: 400;
+	font-style: normal;
+	/* line-height: 171.9%; */
+}
+.destination-header {
+	font-size: 100px;
+	font-family: "Bellefair", serif;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 114.9%;
+}
+.destination-option {
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #d0d6f9;
+	font-size: 16px;
+	line-height: 19.2%;
+}
+.small-text {
+	font-size: 18px;
+	line-height: 180%;
+}
+.small-text-colored {
+	font-size: 18px;
+	line-height: 180%;
+	color: #d0d6f9;
+}
+.stat-header {
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	/* line-height: 16.8%; */
+	margin-bottom: 0px;
+}
+.stat {
+	font-family: "Bellefair", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 28px;
+	/* line-height: 32.1%; */
+}
+.stat-colored {
+	font-family: "Bellefair", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 28px;
+	line-height: 32.1%;
+	color: #d0d6f9;
+}
+/* font-family: "Barlow Condensed", sans-serif;
+font-weight: 400;
+font-style: normal; */
