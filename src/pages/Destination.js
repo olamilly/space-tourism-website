@@ -22,8 +22,12 @@ function Destination() {
 								<span className="pageNumber">01</span>{" "}
 								<span>Pick your Destination</span>
 							</p>
-							<div className="image">
-								<img src={currentDestination.images.webp} alt="destination" />
+							<div className="destinationImage">
+								<img
+									src={currentDestination.images.webp}
+									className="animateImage"
+									alt="destination"
+								/>
 							</div>
 						</div>
 						<div className="large-right">
@@ -34,6 +38,15 @@ function Destination() {
 											key={d.name}
 											onClick={() => {
 												setCurrentDestination(d);
+												document
+													.querySelector(".destinationImage>img")
+													.classList.remove("animateImage");
+												setTimeout(() => {
+													document
+														.querySelector(".destinationImage>img")
+														.classList.add("animateImage");
+												});
+												window.scrollTo(0, 0);
 											}}
 											className={
 												currentDestination === d ? " currentDestination" : "ap "
