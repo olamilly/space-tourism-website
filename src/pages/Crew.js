@@ -18,7 +18,7 @@ function Crew() {
 				<main>
 					<div className="crewBody d-flex">
 						<div className="crewTopLeft">
-							<p className="pageHeader stat mb-0">
+							<p className="pageHeader stat">
 								<span className="pageNumber">02</span>{" "}
 								<span>Meet Your Crew</span>
 							</p>
@@ -27,7 +27,7 @@ function Crew() {
 								<h1 className="big-text memberName">{currentMember.name}</h1>
 							</div>
 							<div className="memberBio d-flex justify-content-center">
-								<p>{currentMember.bio}</p>
+								<p className="small-text-colored ">{currentMember.bio}</p>
 							</div>
 							<div className="d-flex navContainer">
 								<ul className="list-unstyled memberNav">

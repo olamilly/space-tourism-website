@@ -18,7 +18,7 @@ function Destination() {
 				<main>
 					<div className="destinationBody d-flex">
 						<div>
-							<p className="pageHeader stat mb-0">
+							<p className="pageHeader stat">
 								<span className="pageNumber">01</span>{" "}
 								<span>Pick your Destination</span>
 							</p>

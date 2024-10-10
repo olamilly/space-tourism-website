@@ -122,13 +122,14 @@ li {
 	}
 	.details > .small-text-colored {
 		padding-bottom: 1rem;
+		text-align: left !important;
 	}
 	.large-right {
 		min-height: 100%;
 	}
-	.details {
+	/* .details {
 		height: 75%;
-	}
+	} */
 	/* .stats {
 		border-top: 0.5px solid white;
 		padding-top: 1.5rem;

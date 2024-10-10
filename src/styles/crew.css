@@ -94,9 +94,15 @@
 }
 
 @media (min-width: 992px) {
+	.crew > main {
+		padding-top: 1.4rem;
+		padding-bottom: 1.4rem;
+		align-items: center;
+	}
 	.memberImage > img {
-		width: 539.28px;
-		height: 600px;
+		width: 446.74px;
+		height: 506px;
+		margin-right: 0px;
 	}
 	.details {
 		height: auto;
@@ -120,5 +126,16 @@
 	}
 	.memberNav {
 		justify-content: space-between;
+	}
+	.memberName {
+		width: 100%;
+		text-align: left;
+	}
+	.memberBio {
+		justify-content: flex-start !important;
+	}
+	.memberBio > p {
+		width: 80%;
+		text-align: left;
 	}
 }

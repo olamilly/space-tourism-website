@@ -1,0 +1,15 @@
+.technologyName {
+	font-size: 100px;
+}
+@media (min-width: 992px) {
+	.details {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	.technologyImage > img {
+		width: 446.74px;
+		height: 506px;
+		margin-right: 0px;
+	}
+}
