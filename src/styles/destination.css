@@ -36,9 +36,7 @@
 	padding-bottom: 10px;
 	border-bottom: 3px solid white;
 }
-.destinationName {
-	font-size: 100px;
-}
+
 .ap {
 	padding-bottom: 13px;
 	color: #d0d6f9;
@@ -51,6 +49,9 @@ li {
 }
 
 @media (max-width: 575.98px) {
+	.destinationName {
+		font-size: 75px;
+	}
 	.destinationImage > img {
 		width: 150px;
 		height: 150px;
@@ -109,6 +110,13 @@ li {
 }
 
 @media (min-width: 992px) {
+	.destinationNav {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 3rem;
+		width: 100%;
+	}
 	.destinationImage {
 		justify-content: flex-start;
 	}
@@ -116,9 +124,8 @@ li {
 		margin-left: 0px;
 	}
 	.destination > main {
-		padding-top: 1.4rem;
-		padding-bottom: 1.4rem;
-		align-items: center;
+		padding-bottom: 0px;
+		justify-content: center;
 	}
 	.details > .small-text-colored {
 		padding-bottom: 1rem;
@@ -142,6 +149,7 @@ li {
 		border-top: 0.5px solid white;
 		padding-top: 1.5rem;
 		width: 100%;
-		justify-content: space-evenly;
+		justify-content: flex-start;
+		gap: 7rem;
 	}
 }

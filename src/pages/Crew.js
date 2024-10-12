@@ -16,19 +16,23 @@ function Crew() {
 			<Navbar />
 			{currentMember && (
 				<main>
+					<p className="pageHeader stat">
+						<span className="pageNumber">02</span> <span>MEET YOUR CREW</span>
+					</p>
 					<div className="crewBody d-flex">
 						<div className="crewTopLeft">
-							<p className="pageHeader stat">
-								<span className="pageNumber">02</span>{" "}
-								<span>Meet Your Crew</span>
-							</p>
 							<div className="details d-flex">
-								<p className=" memberRole">{currentMember.role}</p>
-								<h1 className="big-text memberName">{currentMember.name}</h1>
+								<p className=" memberRole">
+									{currentMember.role.toUpperCase()}
+								</p>
+								<h1 className="big-text memberName">
+									{currentMember.name.toUpperCase()}
+								</h1>
+								<div className="memberBio d-flex justify-content-center">
+									<p className="small-text-colored ">{currentMember.bio}</p>
+								</div>
 							</div>
-							<div className="memberBio d-flex justify-content-center">
-								<p className="small-text-colored ">{currentMember.bio}</p>
-							</div>
+
 							<div className="d-flex navContainer">
 								<ul className="list-unstyled memberNav">
 									{crew.map((c) => (

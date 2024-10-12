@@ -16,12 +16,12 @@ function Destination() {
 			<Navbar />
 			{currentDestination && (
 				<main>
+					<p className="pageHeader stat">
+						<span className="pageNumber">01</span>{" "}
+						<span>PICK YOUR DESTINATION</span>
+					</p>
 					<div className="destinationBody d-flex">
 						<div>
-							<p className="pageHeader stat">
-								<span className="pageNumber">01</span>{" "}
-								<span>Pick your Destination</span>
-							</p>
 							<div className="destinationImage">
 								<img
 									src={currentDestination.images.webp}
@@ -52,12 +52,12 @@ function Destination() {
 												currentDestination === d ? " currentDestination" : "ap "
 											}
 										>
-											{d.name}
+											{d.name.toUpperCase()}
 										</li>
 									))}
 								</ul>
 								<h1 className="big-text destinationName">
-									{currentDestination.name}
+									{currentDestination.name.toUpperCase()}
 								</h1>
 								<p className="small-text-colored text-center ">
 									{currentDestination.description}

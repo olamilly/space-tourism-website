@@ -7,7 +7,10 @@
 	position: relative;
 	width: 100%;
 }
-
+.crew {
+	display: flex;
+	flex-direction: column;
+}
 .memberImage > img {
 	margin: 1.5rem;
 }
@@ -15,7 +18,7 @@
 	font-size: 100px;
 }
 .memberRole {
-	font-size: 32px;
+	font-size: 20px;
 	color: rgba(255, 255, 255, 0.498);
 	font-family: "Bellefair", serif;
 	font-weight: 400;
@@ -45,15 +48,21 @@
 @media (max-width: 575.98px) {
 	.crewBody {
 		flex-direction: column;
+		flex-grow: 1;
+		justify-content: space-between;
 	}
 	.details > p {
 		margin-bottom: 0px;
 	}
-	main {
+	.crew > main {
+		zoom: 1 !important;
 		padding: 1rem;
+		justify-content: space-between;
 	}
 	.memberName {
-		font-size: 75px;
+		font-size: 40px;
+		width: 100%;
+		text-align: center;
 	}
 	.pageHeader {
 		text-align: center;
@@ -61,9 +70,7 @@
 	.memberImage > img {
 		width: 271.24px;
 		height: 340px;
-	}
-	.memberName {
-		text-align: center;
+		margin-bottom: -1rem;
 	}
 	.memberBio > p {
 		text-align: center;
@@ -77,12 +84,14 @@
 	.memberImage > img {
 		width: 446.74px;
 		height: 560px;
+		margin-bottom: -2rem;
 	}
 	.crewBody {
 		flex-direction: column;
 	}
 	.memberName {
 		text-align: center;
+		font-size: 70px;
 	}
 	.memberBio > p {
 		width: 70%;
@@ -95,9 +104,8 @@
 
 @media (min-width: 992px) {
 	.crew > main {
-		padding-top: 1.4rem;
-		padding-bottom: 1.4rem;
-		align-items: center;
+		padding-bottom: 0px;
+		justify-content: center;
 	}
 	.memberImage > img {
 		width: 446.74px;
@@ -107,6 +115,9 @@
 	.details {
 		height: auto;
 	}
+	.memberName {
+		font-size: 75px;
+	}
 	.crewTopLeft {
 		justify-content: space-evenly;
 		display: flex;
@@ -115,9 +126,7 @@
 	.crewBody {
 		text-align: left !important;
 	}
-	.details > p {
-		width: 100%;
-	}
+
 	.navContainer {
 		justify-content: flex-start;
 	}

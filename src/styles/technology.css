@@ -1,5 +1,87 @@
-.technologyName {
-	font-size: 100px;
+.technologyNav {
+	display: flex;
+	gap: 1rem;
+}
+.technologyImage {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.technologyNav > li {
+	border: 1px solid rgba(255, 255, 255, 0.498);
+	height: 3.7rem !important;
+	width: 3.7rem;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 0.7rem;
+}
+.currentTechnology {
+	border: 1px solid white;
+	background-color: white;
+}
+.currentTechnology > span {
+	color: #0b0d17;
+}
+.unselectedTechnology:hover {
+	border-color: white;
+}
+@media (max-width: 575.98px) {
+	.technologyNav > li {
+		border: 1px solid rgba(255, 255, 255, 0.498);
+		height: 3rem !important;
+		width: 3rem;
+		margin: 0.4rem;
+	}
+	.technologyImage > img {
+		width: 100%;
+		height: 306px;
+	}
+	.technologyImage {
+		margin-left: -1rem;
+		margin-right: -1rem;
+	}
+	.technologyBody {
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		flex-grow: 1;
+	}
+	.technologyNav {
+		justify-content: center;
+		margin: 2rem;
+	}
+	.technologyName {
+		font-size: 40px;
+		text-align: center;
+	}
+	.technologyNav > li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+	.technologyImage > img {
+		width: 100%;
+		height: 356px;
+	}
+
+	.technologyImage {
+		margin-left: -2.5rem;
+		margin-right: -2.5rem;
+	}
+	.technologyBody {
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		flex-grow: 1;
+	}
+	.technologyNav {
+		justify-content: center;
+		margin: 2rem;
+	}
+	.technologyName {
+		font-size: 70px;
+		text-align: center;
+	}
 }
 @media (min-width: 992px) {
 	.details {
@@ -11,5 +93,26 @@
 		width: 446.74px;
 		height: 506px;
 		margin-right: 0px;
+	}
+	.large-left {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.details > p {
+		width: 90%;
+	}
+	.large-left-inner {
+		display: flex;
+		align-items: center;
+	}
+	.technologyNav {
+		flex-direction: column;
+		justify-content: center;
+		margin-right: 1rem;
+		height: 100%;
+	}
+	.technologyName {
+		font-size: 75px;
 	}
 }

@@ -35,7 +35,7 @@ code {
 		monospace;
 }
 .big-text {
-	font-size: 134px;
+	font-size: 120px;
 	font-family: "Bellefair", serif;
 	font-weight: 400;
 	font-style: normal;
@@ -61,7 +61,7 @@ code {
 	line-height: 180%;
 }
 .small-text-colored {
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 180%;
 	color: #d0d6f9;
 }
@@ -85,7 +85,7 @@ code {
 	font-weight: 400;
 	font-style: normal;
 	font-size: 28px;
-	line-height: 32.1%;
+	/* line-height: 32.1%; */
 	color: #d0d6f9;
 }
 /* font-family: "Barlow Condensed", sans-serif;

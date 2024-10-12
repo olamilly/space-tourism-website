@@ -43,22 +43,22 @@ function Navbar() {
 							<ul className="navbar-nav justify-content-evenly align-items-center flex-grow-1 small-text">
 								<li className="nav-item ">
 									<NavLink to="/" activeClassName="active">
-										<span className="mr-2 fw-700">00</span> Home
+										<span className="mr-2 fw-700">00</span> HOME
 									</NavLink>
 								</li>
 								<li className="nav-item ">
 									<NavLink to="/destination">
-										<span className="mr-2 fw-700">01</span> Destination
+										<span className="mr-2 fw-700">01</span> DESTINATION
 									</NavLink>
 								</li>
 								<li className="nav-item">
 									<NavLink to="/crew">
-										<span className="mr-2 fw-700">02</span> Crew
+										<span className="mr-2 fw-700">02</span> CREW
 									</NavLink>
 								</li>
 								<li className="nav-item">
 									<NavLink to="/technology">
-										<span className="mr-2 fw-700">03</span> Technology
+										<span className="mr-2 fw-700">03</span> TECHNOLOGY
 									</NavLink>
 								</li>
 							</ul>

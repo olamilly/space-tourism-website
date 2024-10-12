@@ -11,7 +11,7 @@ function Home(props) {
 						<div className="text">
 							<div className="text-container">
 								<p className="w-100 stat-colored mb-0">
-									So you want to travel to
+									SO YOU WANT TO TRAVEL TO
 								</p>
 								<h1 className="w-100 big-text mb-0">SPACE</h1>
 								<p className="small-text-colored mw75">
