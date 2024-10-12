@@ -42,7 +42,7 @@ function Navbar() {
 						<div className="offcanvas-body position-relative ">
 							<ul className="navbar-nav justify-content-evenly align-items-center flex-grow-1 small-text">
 								<li className="nav-item ">
-									<NavLink to="/" activeClassName="active">
+									<NavLink to="/">
 										<span className="mr-2 fw-700">00</span> HOME
 									</NavLink>
 								</li>

@@ -1,11 +1,50 @@
 // import {  } from ""
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Navbar from "../components/Navbar";
 import useFetch from "../hooks/useFetch";
 import "../styles/technology.css";
 function Technology(props) {
 	const { data: technologies } = useFetch("technology");
 	const [currentTechnology, setCurrentTechnology] = useState(null);
+	const [technologyIndex, setTechnologyIndex] = useState(0);
+	const swipeTargetRef = useRef(null);
+	const [startX, setStartX] = useState(0);
+	const [startY, setStartY] = useState(0);
+
+	const handleSwipeStart = (event) => {
+		const touch = event.touches[0];
+		setStartX(touch.clientX);
+		setStartY(touch.clientY);
+	};
+
+	const handleSwipeEnd = (event) => {
+		const touch = event.changedTouches[0];
+		const endX = touch.clientX;
+		const endY = touch.clientY;
+		const deltaX = endX - startX;
+		const deltaY = endY - startY;
+
+		if (Math.abs(deltaX) > Math.abs(deltaY)) {
+			// Horizontal swipe detected
+			if (deltaX > 0) {
+				if (technologyIndex !== 0) {
+					setTechnologyIndex(technologyIndex - 1);
+					setCurrentTechnology(technologies[technologyIndex - 1]);
+				} else {
+					setTechnologyIndex(technologies.length - 1);
+					setCurrentTechnology(technologies[technologies.length - 1]);
+				}
+			} else {
+				if (technologyIndex !== technologies.length - 1) {
+					setTechnologyIndex(technologyIndex + 1);
+					setCurrentTechnology(technologies[technologyIndex + 1]);
+				} else {
+					setTechnologyIndex(0);
+					setCurrentTechnology(technologies[0]);
+				}
+			}
+		}
+	};
 	useEffect(() => {
 		if (technologies) {
 			setCurrentTechnology(technologies[0]);
@@ -19,7 +58,12 @@ function Technology(props) {
 					<p className="pageHeader stat">
 						<span className="pageNumber">03</span> <span>SPACE LAUNCH 101</span>
 					</p>
-					<div className="technologyBody d-flex">
+					<div
+						className="technologyBody d-flex"
+						ref={swipeTargetRef}
+						onTouchStart={handleSwipeStart}
+						onTouchEnd={handleSwipeEnd}
+					>
 						<div className="large-left">
 							<div className="large-left-inner">
 								<ul className="list-unstyled technologyNav">

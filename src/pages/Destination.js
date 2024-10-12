@@ -1,11 +1,51 @@
 // import {  } from ""
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Navbar from "../components/Navbar";
 import useFetch from "../hooks/useFetch";
 import "../styles/destination.css";
 function Destination() {
 	const { data: destinations } = useFetch("destinations");
 	const [currentDestination, setCurrentDestination] = useState(null);
+	const [destinationIndex, setDestinationIndex] = useState(0);
+	const swipeTargetRef = useRef(null);
+	const [startX, setStartX] = useState(0);
+	const [startY, setStartY] = useState(0);
+
+	const handleSwipeStart = (event) => {
+		const touch = event.touches[0];
+		setStartX(touch.clientX);
+		setStartY(touch.clientY);
+	};
+
+	const handleSwipeEnd = (event) => {
+		const touch = event.changedTouches[0];
+		const endX = touch.clientX;
+		const endY = touch.clientY;
+		const deltaX = endX - startX;
+		const deltaY = endY - startY;
+
+		if (Math.abs(deltaX) > Math.abs(deltaY)) {
+			// Horizontal swipe detected
+			if (deltaX > 0) {
+				if (destinationIndex !== 0) {
+					setDestinationIndex(destinationIndex - 1);
+					setCurrentDestination(destinations[destinationIndex - 1]);
+				} else {
+					setDestinationIndex(destinations.length - 1);
+					setCurrentDestination(destinations[destinations.length - 1]);
+				}
+			} else {
+				if (destinationIndex !== destinations.length - 1) {
+					setDestinationIndex(destinationIndex + 1);
+					setCurrentDestination(destinations[destinationIndex + 1]);
+				} else {
+					setDestinationIndex(0);
+					setCurrentDestination(destinations[0]);
+				}
+			}
+		}
+	};
+
 	useEffect(() => {
 		if (destinations) {
 			setCurrentDestination(destinations[0]);
@@ -20,7 +60,12 @@ function Destination() {
 						<span className="pageNumber">01</span>{" "}
 						<span>PICK YOUR DESTINATION</span>
 					</p>
-					<div className="destinationBody d-flex">
+					<div
+						className="destinationBody d-flex"
+						ref={swipeTargetRef}
+						onTouchStart={handleSwipeStart}
+						onTouchEnd={handleSwipeEnd}
+					>
 						<div>
 							<div className="destinationImage">
 								<img
