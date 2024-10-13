@@ -149,46 +149,43 @@ main {
 		margin-bottom: 1.4rem;
 	}
 }
+div.vz-circle-bg {
+	width: 10px;
+	height: 10px;
+	background: rgba(255, 255, 255, 0.162);
+	position: absolute;
+	border-radius: 105px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	visibility: visible;
+	transition: 300ms all ease;
+}
+div.vz-circle {
+	width: 215px;
+	height: 215px;
+	background: white;
+	border-radius: 107px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 .animation-container {
 	width: 210px;
 	height: 210px;
 	position: relative;
-	/* margin: 100px auto; */
-	div.vz-circle-bg {
-		width: 10px;
-		height: 10px;
-		background: rgba(255, 255, 255, 0.162);
-		position: absolute;
-		border-radius: 105px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		opacity: 1;
-		visibility: visible;
-		transition: 300ms all ease;
-	}
-	div.vz-circle {
-		width: 215px;
-		height: 215px;
-		background: white;
-		border-radius: 107px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	&:hover {
-		div.vz-circle-bg {
-			width: 325px;
-			height: 325px;
-			background: rgba(255, 255, 255, 0.162);
-			position: absolute;
-			border-radius: 50%;
-			top: 50%;
-			left: 50%;
-		}
-		div.vz-circle > p {
-			color: rgb(206, 199, 199);
-		}
-	}
+}
+.animation-container:hover div.vz-circle-bg {
+	width: 325px;
+	height: 325px;
+	background: rgba(255, 255, 255, 0.162);
+	position: absolute;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+}
+.animation-container:hover div.vz-circle > p {
+	color: rgb(206, 199, 199);
 }
